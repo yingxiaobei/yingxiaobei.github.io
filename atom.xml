@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-25T06:36:30.223Z</updated>
+  <updated>2021-10-25T06:26:21.887Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>this</title>
-    <link href="http://example.com/2021/10/25/JavaScript/this/"/>
-    <id>http://example.com/2021/10/25/JavaScript/this/</id>
-    <published>2021-10-25T03:03:47.000Z</published>
-    <updated>2021-10-25T06:36:30.223Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="什么是this"><a href="#什么是this" class="headerlink" title="什么是this"></a>什么是this</h2><p>this 是JavaScript中的一个关键词，在JavaScript中，this不是固定不变的，在函数被调用时发生的绑定，它指向什么完全取决于函数在哪里被调用。<br><strong>this是一个指针，指向调用函数的那个对象。</strong><br><strong>​</strong></p><h2 id="为什么要用this"><a href="#为什么要用this" class="headerlink" title="为什么要用this"></a>为什么要用this</h2><p>回答这个问题我们就先看看如果不使用this会出现什么问题。试想下面代码如果不使用this应该怎么写：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function speak()&#123;</span><br><span class="line">    var name = this.name</span><br><span class="line">    console.log(`Hello I am $&#123;name&#125;`)</span><br><span class="line">&#125;</span><br><span class="line">var me = &#123;</span><br><span class="line">    name: &#x27;a&#x27;,</span><br><span class="line">    speak: speak</span><br><span class="line">&#125;</span><br><span class="line">var you = &#123;</span><br><span class="line">    name: &#x27;b&#x27;,</span><br><span class="line">    speak: speak</span><br><span class="line">&#125;</span><br><span class="line">me.speak()  //Hello I am a</span><br><span class="line">you.speak()  //Hello I am b</span><br></pre></td></tr></table></figure><p>this可以在同一个执行环境中使用不同的上下文对象。它其实提供了一种更加优雅的方式来隐式“传递”一个对象引用，因此可以使API设计的更加简洁且易于复用。<br>this使用频率很高，如果我们不懂this，那么在看别人的代码或者是源码的时候，就会很吃力。<br><strong>一定程度上减少代码量，提高代码整洁性和可读性</strong></p><h2 id="绑定规则"><a href="#绑定规则" class="headerlink" title="绑定规则"></a>绑定规则</h2><ul><li>在浏览器里，在全局范围内this 指向window对象；</li><li>在函数中，this永远指向最后调用他的那个对象；</li><li>构造函数中，this指向new出来的那个新的对象；</li><li>call、apply、bind中的this被强绑定在指定的那个对象上；</li><li>箭头函数中this比较特殊,箭头函数this为父作用域的this，不是调用时的this.要知道前四种方式,都是调用时确定,也就是动态的,而箭头函数的this指向是静态的,声明的时候就确定了下来；</li><li>apply、call、bind都是js给函数内置的一些API，调用他们可以为函数指定this的执行,同时也可以传参。</li></ul><p>​</p><h2 id="绑定类型"><a href="#绑定类型" class="headerlink" title="绑定类型"></a>绑定类型</h2><p><a href="https://juejin.cn/post/6844903805587619854#heading-11">https://juejin.cn/post/6844903805587619854#heading-11</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;什么是this&quot;&gt;&lt;a href=&quot;#什么是this&quot; class=&quot;headerlink&quot; title=&quot;什么是this&quot;&gt;&lt;/a&gt;什么是this&lt;/h2&gt;&lt;p&gt;this 是JavaScript中的一个关键词，在JavaScript中，this不是固定不变的，在</summary>
-      
-    
-    
-    
-    <category term="JavaScript" scheme="http://example.com/categories/JavaScript/"/>
-    
-    
-    <category term="JavaScript" scheme="http://example.com/tags/JavaScript/"/>
-    
-  </entry>
   
   <entry>
     <title>作用域及作用域链</title>
@@ -54,6 +30,30 @@
       
     <summary type="html">&lt;h2 id=&quot;什么是作用域？&quot;&gt;&lt;a href=&quot;#什么是作用域？&quot; class=&quot;headerlink&quot; title=&quot;什么是作用域？&quot;&gt;&lt;/a&gt;什么是作用域？&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;定义：&lt;/strong&gt;&lt;br&gt;变量可访问某一变量的区域（范围）&lt;/p&gt;
 &lt;p&gt;&lt;s</summary>
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://example.com/categories/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="http://example.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>this</title>
+    <link href="http://example.com/2021/10/25/JavaScript/this/"/>
+    <id>http://example.com/2021/10/25/JavaScript/this/</id>
+    <published>2021-10-25T03:03:47.000Z</published>
+    <updated>2021-10-25T06:36:30.223Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是this"><a href="#什么是this" class="headerlink" title="什么是this"></a>什么是this</h2><p>this 是JavaScript中的一个关键词，在JavaScript中，this不是固定不变的，在函数被调用时发生的绑定，它指向什么完全取决于函数在哪里被调用。<br><strong>this是一个指针，指向调用函数的那个对象。</strong><br><strong>​</strong></p><h2 id="为什么要用this"><a href="#为什么要用this" class="headerlink" title="为什么要用this"></a>为什么要用this</h2><p>回答这个问题我们就先看看如果不使用this会出现什么问题。试想下面代码如果不使用this应该怎么写：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function speak()&#123;</span><br><span class="line">    var name = this.name</span><br><span class="line">    console.log(`Hello I am $&#123;name&#125;`)</span><br><span class="line">&#125;</span><br><span class="line">var me = &#123;</span><br><span class="line">    name: &#x27;a&#x27;,</span><br><span class="line">    speak: speak</span><br><span class="line">&#125;</span><br><span class="line">var you = &#123;</span><br><span class="line">    name: &#x27;b&#x27;,</span><br><span class="line">    speak: speak</span><br><span class="line">&#125;</span><br><span class="line">me.speak()  //Hello I am a</span><br><span class="line">you.speak()  //Hello I am b</span><br></pre></td></tr></table></figure><p>this可以在同一个执行环境中使用不同的上下文对象。它其实提供了一种更加优雅的方式来隐式“传递”一个对象引用，因此可以使API设计的更加简洁且易于复用。<br>this使用频率很高，如果我们不懂this，那么在看别人的代码或者是源码的时候，就会很吃力。<br><strong>一定程度上减少代码量，提高代码整洁性和可读性</strong></p><h2 id="绑定规则"><a href="#绑定规则" class="headerlink" title="绑定规则"></a>绑定规则</h2><ul><li>在浏览器里，在全局范围内this 指向window对象；</li><li>在函数中，this永远指向最后调用他的那个对象；</li><li>构造函数中，this指向new出来的那个新的对象；</li><li>call、apply、bind中的this被强绑定在指定的那个对象上；</li><li>箭头函数中this比较特殊,箭头函数this为父作用域的this，不是调用时的this.要知道前四种方式,都是调用时确定,也就是动态的,而箭头函数的this指向是静态的,声明的时候就确定了下来；</li><li>apply、call、bind都是js给函数内置的一些API，调用他们可以为函数指定this的执行,同时也可以传参。</li></ul><p>​</p><h2 id="绑定类型"><a href="#绑定类型" class="headerlink" title="绑定类型"></a>绑定类型</h2><p><a href="https://juejin.cn/post/6844903805587619854#heading-11">https://juejin.cn/post/6844903805587619854#heading-11</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;什么是this&quot;&gt;&lt;a href=&quot;#什么是this&quot; class=&quot;headerlink&quot; title=&quot;什么是this&quot;&gt;&lt;/a&gt;什么是this&lt;/h2&gt;&lt;p&gt;this 是JavaScript中的一个关键词，在JavaScript中，this不是固定不变的，在</summary>
       
     
     
